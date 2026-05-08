@@ -1,0 +1,96 @@
+version: "3.9"
+
+services:
+#  api:
+#    container_name: agentic-assistant
+#    #build:
+#      #context:
+#    #command: uvicorn apps.main:app --host 0.0.0.0 --port 8000 --reload --workers 1
+#    volumes:
+#      - ../../apps:/app/apps:ro
+#    depends_on:
+#      redis:
+#        condition: service_started
+#      postgres:
+#        condition: service_started
+#      ollama :
+#        condition: service_healthy
+#      qdrant:
+#        condition: service_started
+#    networks:
+#      - agentic-network
+
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    networks:
+      - agentic-network
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=agentic_db
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - agentic-network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    entrypoint: []
+    command:
+      - /bin/sh
+      - -c
+      - |
+        ollama serve &
+        sleep 10
+        ollama pull gemma3:4b
+        ollama pull nomic-embed-text
+        tail -f /dev/null
+    healthcheck:
+      test: [ "CMD", "ollama", "list" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 90s
+    networks:
+      - agentic-network
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    ports:
+      - "6333:6333"  # HTTP API
+      # - "6334:6334"  # gRPC
+    volumes:
+      - qdrant_data:/qdrant/storage
+    #environment:
+      #- QDRANT__SERVICE__GRPC_PORT=6334
+    networks:
+      - agentic-network
+
+volumes:
+  redis_data:
+  postgres_data:
+  ollama_models:
+  qdrant_data:
+
+networks:
+  agentic-network:
+    name: agentic-network
+    driver: bridge

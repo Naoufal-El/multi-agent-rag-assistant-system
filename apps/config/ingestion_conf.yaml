@@ -1,0 +1,30 @@
+params:
+  # Directory Paths
+  pending_dir: $INGESTION_PENDING_DIR
+  processing_dir: $INGESTION_PROCESSING_DIR
+  completed_dir: $INGESTION_COMPLETED_DIR
+  failed_dir: $INGESTION_FAILED_DIR
+
+  # Supported Formats
+  supported_extensions: $INGESTION_SUPPORTED_EXTENSIONS
+
+  # Job Scheduling
+  auto_scan_enabled: $INGESTION_AUTO_SCAN_ENABLED
+  scan_interval_minutes: $INGESTION_SCAN_INTERVAL_MINUTES
+
+  # Document Processing
+  chunk_size: $INGESTION_CHUNK_SIZE
+  chunk_overlap: $INGESTION_CHUNK_OVERLAP
+  min_chunk_size: $INGESTION_MIN_CHUNK_SIZE
+
+  # File Validation
+  max_file_size_mb: $INGESTION_MAX_FILE_SIZE_MB
+  max_concurrent_files: $INGESTION_MAX_CONCURRENT_FILES
+
+  # Batch Processing
+  batch_size: $INGESTION_BATCH_SIZE
+  retry_failed_files: $INGESTION_RETRY_FAILED_FILES
+  max_retries: $INGESTION_MAX_RETRIES
+
+  # Qdrant
+  create_collection_if_not_exists: $INGESTION_CREATE_COLLECTION_IF_NOT_EXISTS

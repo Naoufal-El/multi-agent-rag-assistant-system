@@ -1,0 +1,6 @@
+# Authentication configuration file
+
+params:
+  secret_key: $AUTH_SECRET_KEY
+  algorithm: $AUTH_ALGORITHM
+  min_to_expire: $AUTH_MIN_TO_EXPIRE

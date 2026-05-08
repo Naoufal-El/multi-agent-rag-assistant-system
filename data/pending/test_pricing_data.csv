@@ -1,0 +1,11 @@
+product_id,product_name,category,regular_price,sale_price,discount_percent,stock_quantity,reorder_level
+PHONE-001,SmartPhone Pro X,Electronics,899.99,799.99,11,45,20
+LAPTOP-002,UltraBook Elite,Electronics,1299.99,1199.99,8,32,15
+FRIDGE-003,EcoFresh Refrigerator,Appliances,1899.99,1699.99,11,18,5
+WASH-004,SmartWash 3000,Appliances,699.99,649.99,7,25,10
+SOFA-005,ComfortMax Sofa,Furniture,1299.99,1099.99,15,12,5
+DESK-006,ErgoWork Standing Desk,Furniture,599.99,499.99,17,28,8
+TABLET-007,ProTab Ultra,Electronics,549.99,499.99,9,56,25
+MICRO-008,QuickHeat Microwave,Appliances,299.99,259.99,13,41,15
+CHAIR-009,ErgoSit Office Chair,Furniture,399.99,349.99,13,34,12
+TV-010,CrystalView 55inch,Electronics,799.99,699.99,13,22,10

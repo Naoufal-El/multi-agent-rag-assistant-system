@@ -1,0 +1,4 @@
+params:
+  ip: $REDIS_IP
+  port: $REDIS_PORT
+  index_database: $REDIS_INDEX_DATABASE

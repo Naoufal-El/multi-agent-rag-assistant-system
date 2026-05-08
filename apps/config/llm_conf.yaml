@@ -1,0 +1,16 @@
+params:
+  ip: $LLM_IP
+  port: $LLM_PORT
+  model: $LLM_MODEL
+  conversation_temperature: $LLM_CONVERSATION_TEMPERATURE
+  guardrails_temperature: $LLM_GUARDRAILS_TEMPERATURE
+  rag_temperature: $LLM_RAG_TEMPERATURE
+  routing_temperature: $LLM_ROUTING_TEMPERATURE
+  verbose: $LLM_VERBOSE
+  max_history_msgs: $LLM_MAX_HISTORY_MSGS
+  embedding_model: $LLM_EMBEDDING_MODEL
+  max_tokens: $LLM_MAX_TOKENS
+  output_confidence_threshold: $OUTPUT_CONFIDENCE_THRESHOLD
+  min_retrieved_chunks: $MIN_RETRIEVED_CHUNKS
+  max_regeneration_attempts: $MAX_REGENERATION_ATTEMPTS
+  min_response_length: $MIN_RESPONSE_LENGTH

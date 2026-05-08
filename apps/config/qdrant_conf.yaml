@@ -1,0 +1,8 @@
+params:
+  ip: $QDRANT_IP
+  port: $QDRANT_PORT
+  customer_collection: $QDRANT_CUSTOMER_COLLECTION
+  process_collection: $QDRANT_PROCESS_COLLECTION
+  vector_size: $QDRANT_VECTOR_SIZE
+  retrieval_enabled: $QDRANT_RETRIEVAL_ENABLED
+  retrieval_top_k: $QDRANT_RETRIEVAL_TOP_K

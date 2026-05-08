@@ -1,0 +1,75 @@
+{
+  "catalog_name": "Q4 2025 Product Catalog",
+  "version": "2.0",
+  "last_updated": "2025-10-15",
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Latest technology and gadgets",
+      "products": [
+        {
+          "sku": "PHONE-001",
+          "name": "SmartPhone Pro X",
+          "price": 899.99,
+          "in_stock": true,
+          "features": [
+            "6.7 inch OLED display",
+            "128GB storage",
+            "5G capable",
+            "Dual camera system"
+          ],
+          "warranty_months": 12
+        },
+        {
+          "sku": "LAPTOP-002",
+          "name": "UltraBook Elite",
+          "price": 1299.99,
+          "in_stock": true,
+          "features": [
+            "Intel i7 processor",
+            "16GB RAM",
+            "512GB SSD",
+            "14 hour battery life"
+          ],
+          "warranty_months": 24
+        }
+      ]
+    },
+    {
+      "id": "appliances",
+      "name": "Home Appliances",
+      "description": "Essential home appliances",
+      "products": [
+        {
+          "sku": "FRIDGE-003",
+          "name": "EcoFresh Refrigerator",
+          "price": 1899.99,
+          "in_stock": true,
+          "features": [
+            "Energy Star certified",
+            "25 cubic feet capacity",
+            "Smart temperature control",
+            "Ice maker included"
+          ],
+          "warranty_months": 24,
+          "installation_included": true
+        }
+      ]
+    }
+  ],
+  "shipping_zones": [
+    {
+      "zone": "Zone A",
+      "states": ["CA", "OR", "WA"],
+      "standard_days": "3-5",
+      "express_days": "1-2"
+    },
+    {
+      "zone": "Zone B",
+      "states": ["NY", "NJ", "PA", "MA"],
+      "standard_days": "5-7",
+      "express_days": "2-3"
+    }
+  ]
+}

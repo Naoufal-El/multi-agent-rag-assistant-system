@@ -1,0 +1,6 @@
+params:
+  user: $POSTGRES_USER
+  password: $POSTGRES_PASSWORD
+  ip: $POSTGRES_IP
+  port: $POSTGRES_PORT
+  database: $POSTGRES_DATABASE

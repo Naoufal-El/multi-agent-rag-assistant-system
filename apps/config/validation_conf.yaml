@@ -1,0 +1,25 @@
+# Validation Rules Configuration
+# Manages input validation thresholds and patterns
+
+params:
+  # Text length constraints
+  min_length: $VALIDATION_MIN_LENGTH
+  max_length: $VALIDATION_MAX_LENGTH
+
+  # Character ratio thresholds
+  max_emoji_ratio: $VALIDATION_MAX_EMOJI_RATIO
+  max_special_char_ratio: $VALIDATION_MAX_SPECIAL_CHAR_RATIO
+
+  # Rate limiting
+  rate_limit_enabled: $VALIDATION_RATE_LIMIT_ENABLED
+  max_requests_per_minute: $VALIDATION_MAX_REQUESTS_PER_MINUTE
+  max_requests_per_hour: $VALIDATION_MAX_REQUESTS_PER_HOUR
+
+  # Spam detection
+  spam_detection_enabled: $VALIDATION_SPAM_DETECTION_ENABLED
+  max_repeated_queries: $VALIDATION_MAX_REPEATED_QUERIES
+
+  # Execution strategy
+  strategy: $VALIDATION_STRATEGY  # fail_fast | collect_all
+
+  layer2_threshold: $VALIDATION_LAYER2_THRESHOLD

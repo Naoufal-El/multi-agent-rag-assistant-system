@@ -1,0 +1,18 @@
+params:
+  # Memory Strategy
+  strategy: $MEMORY_STRATEGY
+
+  # Redis Cache Settings
+  redis_ttl_days: $REDIS_TTL_DAYS
+  redis_max_history_buffer: $REDIS_MAX_HISTORY_BUFFER
+
+  # PostgreSQL Settings
+  max_history_from_db: $MAX_HISTORY_FROM_DB
+
+  # PostgreSQL Connection Pool
+  postgres_pool_size: $POSTGRES_POOL_SIZE
+  postgres_max_overflow: $POSTGRES_MAX_OVERFLOW
+  postgres_pool_recycle: $POSTGRES_POOL_RECYCLE
+
+  # Cache Behavior
+  cache_warm_on_load: $CACHE_WARM_ON_LOAD
